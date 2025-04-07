@@ -1,0 +1,201 @@
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+header {
+    background-color: #2a3d66;
+    color: white;
+    padding: 20px 0;
+
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #e8e8e8;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #3e5060;
+}
+
+/* Login Page Styles */
+.login-container {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-container .form-control {
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.login-container button {
+    background-color: #2a3d66;
+    color: white;
+    font-size: 1rem;
+    padding: 12px 0;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+    background-color: #1f2c47;
+}
+
+.login-container .error {
+    color: #ff4d4d;
+    text-align: center;
+    font-weight: bold;
+}
+
+.login-container .form-label {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Portal Page Styles */
+.dashboard {
+    text-align: center;
+}
+
+.dashboard h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.dashboard p {
+    font-size: 1.1rem;
+    color: #6c757d;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.card {
+    position: absolute
+    display: flex
+    flex-direction: row
+    background-color: #ffffff;
+    word-wrap: break-word;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 1.25rem;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 1.1rem;
+    color: #6c757d;
+}
+
+.card .btn {
+    background-color: #2a3d66;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.card .btn:hover {
+    background-color: #1f2c47;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #2a3d66;
+    color: white;
+
+    margin-top: 1rem;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+    text-align: center
+    }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .login-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .login-container h2 {
+        font-size: 1.8rem;
+    }
+}
