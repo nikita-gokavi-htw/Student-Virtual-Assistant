@@ -1,6 +1,20 @@
 import hashlib
 import getpass
 import webbrowser
+import json
+import os
+
+USER_DB = 'users.json'
+
+def load_users():
+    if os.path.exists(USER_DB):
+        with open(USER_DB, 'r') as f:
+            return json.load(f)
+    return {}
+
+def save_users(users):
+    with open(USER_DB, 'w') as f:
+        json.dump(users, f)
 
 # Simulated user data (you'd use a proper database in real applications)
 users_db = {
