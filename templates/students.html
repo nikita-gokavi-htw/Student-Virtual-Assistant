@@ -1,0 +1,23 @@
+<!-- templates/students.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Students</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Registered Students</h2>
+        {% if students %}
+            <ul class="list">
+                {% for student in students %}
+                    <li><strong>{{ student.name }}</strong> - {{ student.contact_info.email }} | {{ student.contact_info.phone }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No students registered yet.</p>
+        {% endif %}
+        <a class="btn" href="{{ url_for('portal') }}">⬅ Back to Portal</a>
+    </div>
+</body>
+</html>

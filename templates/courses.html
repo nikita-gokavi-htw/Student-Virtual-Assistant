@@ -1,0 +1,26 @@
+<!-- templates/courses.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Courses</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Available Courses</h2>
+        {% if courses %}
+            <ul class="list">
+                {% for course in courses %}
+                    <li>
+                        <strong>{{ course.title }}</strong> ({{ course.course_type }}) <br>
+                        Instructor: {{ course.teacher.name if course.teacher else 'Not Assigned' }}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No courses available yet.</p>
+        {% endif %}
+        <a class="btn" href="{{ url_for('portal') }}">⬅ Back to Portal</a>
+    </div>
+</body>
+</html>
